@@ -1,0 +1,218 @@
+/* styles.css */
+
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap');
+
+/* ================================
+   VARIÁVEIS DE ESTILO
+================================ */
+:root {
+    --cor-principal: #ff0000;
+    --cor-secundaria: #ffcc00;
+    --cor-escura: #111;
+    --cor-intermediaria: #222;
+    --cor-texto: #eee;
+    --transicao-padrao: all 0.3s ease;
+}
+
+/* ================================
+   ESTILO GLOBAL
+================================ */
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--cor-escura);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+header {
+    background: linear-gradient(to right, var(--cor-principal), #800000);
+    border-bottom: 5px solid var(--cor-secundaria);
+}
+
+header img {
+    max-height: 80px;
+    border: 3px solid var(--cor-secundaria);
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria) !important;
+    transform: scale(1.1);
+}
+
+/* ================================
+   SEÇÃO DE BOAS-VINDAS
+================================ */
+.inicio-fundo {
+    background: url('img/muay-thai-ring.jpg') center/cover no-repeat;
+    padding: 5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.botao-inicio {
+    background: var(--cor-principal);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    transition: var(--transicao-padrao);
+}
+
+.botao-inicio:hover {
+    background: var(--cor-secundaria);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* ================================
+   SEÇÃO MUAY THAI
+================================ */
+.secao-Muay\ Thai {
+    background: var(--cor-intermediaria);
+    padding: 3rem;
+    border-left: 5px solid var(--cor-principal);
+    border-radius: 10px;
+}
+
+/* ================================
+   GALERIA
+================================ */
+.fundo-galeria {
+    background: #000;
+    border: 2px solid var(--cor-principal);
+    border-radius: 10px;
+}
+
+.fundo-galeria img {
+    border: 3px solid var(--cor-principal);
+    transition: transform 0.3s ease;
+}
+
+.fundo-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* ================================
+   FORMULÁRIO
+================================ */
+.formulario {
+    background: var(--cor-intermediaria);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.33);
+}
+
+.form-control {
+    background: var(--cor-escura);
+    border: 1px solid var(--cor-secundaria);
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 10px var(--cor-principal);
+}
+
+/* Botões padrões */
+.botao-padrao,
+.tamanho-botao {
+    background: var(--cor-principal);
+    border: none;
+    font-size: 1.2rem;
+    transition: var(--transicao-padrao);
+    color: #fff;
+}
+
+.botao-padrao:hover,
+.tamanho-botao:hover {
+    background: var(--cor-secundaria);
+    color: #000;
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+footer {
+    background: var(--cor-escura);
+    border-top: 3px solid var(--cor-principal);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: var(--transicao-padrao);
+    color: var(--cor-secundaria);
+}
+
+footer i:hover {
+    color: var(--cor-principal);
+}
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #MuayThai {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
+}
